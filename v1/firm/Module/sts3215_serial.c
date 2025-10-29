@@ -49,7 +49,7 @@ int STS3215_ReadSerial(uint8_t *dat, int dat_len) {
 
 int STS3215_WriteSerial(uint8_t *dat, int dat_len) {
     while (dat_len--) {
-        if (g_buf_len<sizeof(g_buf)) {
+        if (g_buf_len < sizeof(g_buf)) {
             g_buf[g_buf_len] = *dat;
             g_buf_len++;
             dat++;
